@@ -1,5 +1,6 @@
 import re
 from enum import Enum
+from typeguard import typechecked
 import titlecase as tc
 from .db_words import SMALL_TITLE
 
@@ -14,6 +15,7 @@ class CaseType(Enum):
     CAMEL = 2
     PASCAL = 3
 
+@typechecked
 def casefold(text: str) -> str:
     """
     Returns a lowercase version of the string that is 
@@ -30,6 +32,7 @@ def casefold(text: str) -> str:
 
     return text.casefold()
 
+@typechecked
 def lower_case(text: str) -> str:
     """
     All cased characters are converted into lowercase.
@@ -40,6 +43,7 @@ def lower_case(text: str) -> str:
 
     return text.lower()
 
+@typechecked
 def upper_case(text: str) -> str:
     """
     All cased characters are converted into uppercase.
@@ -50,6 +54,7 @@ def upper_case(text: str) -> str:
 
     return text.upper()
 
+@typechecked
 def capital_case(text: str) -> str:
     """
     For each word in the string, the first character is uppercased 
@@ -67,6 +72,7 @@ def capital_case(text: str) -> str:
 
     return text.title()
 
+@typechecked
 def title_case(text: str) -> str:
     """
     Formats text with a proper title case for article/publication headlines.
@@ -91,6 +97,7 @@ def title_case(text: str) -> str:
 
     return tc.titlecase(text)
 
+@typechecked
 def sentence_case(text: str) -> str:
     """
     First character is capitalized and rest all characters are lowercased.
@@ -102,6 +109,7 @@ def sentence_case(text: str) -> str:
 
     return text.capitalize()
 
+@typechecked
 def swap_case(text: str) -> str:
     """
     Uppercase characters are converted into lowercase and 
@@ -114,6 +122,7 @@ def swap_case(text: str) -> str:
 
     return text.swapcase()
 
+@typechecked
 def text_split(text: str, 
                type: CaseType = CaseType.LOWER) -> list[str]:
     """
@@ -143,6 +152,7 @@ def text_split(text: str,
             words = text.title().split()
     return words
 
+@typechecked
 def flat_case(text: str) -> str:
     """
     Converts into flat case.
@@ -153,6 +163,7 @@ def flat_case(text: str) -> str:
 
     return "".join(text_split(text))
 
+@typechecked
 def upper_flat_case(text: str) -> str:
     """
     Converts into upper flat case.
@@ -163,6 +174,7 @@ def upper_flat_case(text: str) -> str:
 
     return "".join(text_split(text, type=CaseType.UPPER))
 
+@typechecked
 def pascal_case(text: str) -> str:
     """
     Converts into pascal case.
@@ -174,6 +186,7 @@ def pascal_case(text: str) -> str:
 
     return "".join(text_split(text, type=CaseType.PASCAL))
 
+@typechecked
 def camel_case(text: str) -> str:
     """
     Converts into camel case.
@@ -185,6 +198,7 @@ def camel_case(text: str) -> str:
 
     return "".join(text_split(text, type=CaseType.CAMEL))
 
+@typechecked
 def snake_case(text: str) -> str:
     """
     Converts into snake case.
@@ -196,6 +210,7 @@ def snake_case(text: str) -> str:
 
     return "_".join(text_split(text))
 
+@typechecked
 def constant_case(text: str) -> str:
     """
     Converts into constant case.
@@ -207,6 +222,7 @@ def constant_case(text: str) -> str:
 
     return "_".join(text_split(text, type=CaseType.UPPER))
 
+@typechecked
 def camel_snake_case(text: str) -> str:
     """
     Converts into camel snake case.
@@ -217,6 +233,7 @@ def camel_snake_case(text: str) -> str:
 
     return "_".join(text_split(text, type=CaseType.CAMEL))
 
+@typechecked
 def pascal_snake_case(text: str) -> str:
     """
     Converts into pascal snake case.
@@ -227,6 +244,7 @@ def pascal_snake_case(text: str) -> str:
 
     return "_".join(text_split(text, type=CaseType.PASCAL))
 
+@typechecked
 def dot_case(text: str) -> str:
     """
     Converts into dot case.
@@ -237,6 +255,7 @@ def dot_case(text: str) -> str:
 
     return ".".join(text_split(text))
 
+@typechecked
 def kebab_case(text: str) -> str:
     """
     Converts into kebab case.
@@ -248,6 +267,7 @@ def kebab_case(text: str) -> str:
 
     return "-".join(text_split(text))
 
+@typechecked
 def cobol_case(text: str) -> str:
     """
     Converts into COBOL case where every word is capitalised.
@@ -259,6 +279,7 @@ def cobol_case(text: str) -> str:
 
     return "-".join(text_split(text, type=CaseType.UPPER))
 
+@typechecked
 def train_case(text: str) -> str:
     """
     Converts into train case where first letter of each word capitalized.
@@ -270,6 +291,7 @@ def train_case(text: str) -> str:
 
     return "-".join(text_split(text, type=CaseType.PASCAL))
 
+@typechecked
 def camel_to_lower(text: str) -> str:
     """
     Split Camel Case and convert to lowercase. 
@@ -281,6 +303,7 @@ def camel_to_lower(text: str) -> str:
 
     return RE_CAMEL_CASE.sub(r" \1", text).strip().lower()
 
+@typechecked
 def snake_to_lower(text: str) -> str:
     """
     Split Snake Case and convert to lowercase. 
@@ -292,6 +315,7 @@ def snake_to_lower(text: str) -> str:
 
     return " ".join(text.strip().lower().split("_"))
 
+@typechecked
 def kebab_to_lower(text: str) -> str:
     """
     Split Kebab Case and convert to lowercase. 

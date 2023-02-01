@@ -1,8 +1,9 @@
 import re
 import unicodedata
-from html.entities import name2codepoint
 import unidecode
+from html.entities import name2codepoint
 from typing import Optional
+from typeguard import typechecked
 
 CHAR_ENTITY_PATTERN = re.compile(r'&(%s);' % '|'.join(name2codepoint))
 DECIMAL_PATTERN = re.compile(r'&#(\d+);')
@@ -14,6 +15,7 @@ DUPLICATE_DASH_PATTERN = re.compile(r'-{2,}')
 NUMBERS_PATTERN = re.compile(r'(?<=\d),(?=\d)')
 DEFAULT_SEPARATOR = '-'
 
+@typechecked
 def slugify(text: str, 
             separator: str = DEFAULT_SEPARATOR, 
             regex_pattern: str = None,

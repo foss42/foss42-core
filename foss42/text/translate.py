@@ -1,7 +1,8 @@
 # Utility Translators for various types of common or obscure lingo
-
+from typeguard import typechecked
 from .db_helpers import LEET_CHAR, CHAR_TO_NUMBER, UPSIDE_DOWN, MIRROR
 
+@typechecked
 def phone2numeric(text: str) -> str:
     """
     Convert a phone number with letters into its numeric equivalent.
@@ -12,6 +13,7 @@ def phone2numeric(text: str) -> str:
 
     return "".join(CHAR_TO_NUMBER.get(c, c) for c in text.lower())
 
+@typechecked
 def leet(text: str) -> str:
     """
     Returns the 1337 version of the text.
@@ -22,6 +24,7 @@ def leet(text: str) -> str:
 
     return "".join(LEET_CHAR.get(c, c) for c in text.lower())
 
+@typechecked
 def upside_down(text: str) -> str:
     """
     Returns the upside down version of the text.
@@ -32,6 +35,7 @@ def upside_down(text: str) -> str:
 
     return ''.join(reversed([UPSIDE_DOWN.get(c, c) for c in text]))
 
+@typechecked
 def mirror(text: str) -> str:
     """
     Returns the mirror version of the text.
