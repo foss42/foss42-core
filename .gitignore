@@ -1,2 +1,4 @@
 
 *.pyc
+foss42.egg-info/
+.vscode/
