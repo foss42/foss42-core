@@ -1,4 +1,4 @@
-from os import path, walk
+from os import path
 from setuptools import setup
 from importlib.machinery import SourceFileLoader
 
