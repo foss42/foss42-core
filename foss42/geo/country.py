@@ -225,26 +225,26 @@ def code_to_data(code: str) -> dict:
         return NO_WB_DATA
 
 @typechecked
-def country_subdivision(code: str) -> list[dict]:
+def code_to_subdivision(code: str) -> list[dict]:
     """
-    Returns the country subdivision details for the given two letter (Alpha-2) or three letter (Alpha-3) ISO 3166-1 country code. 
+    Returns the country subdivision details (states, territories, etc.) for the given two letter (Alpha-2) or three letter (Alpha-3) ISO 3166-1 country code. 
     Currently, the following countries are supported - AU (Australia), US (USA), CN (China), Japan (JP), IN (India), KR (South Korea) and CA (Canada).
 
-    >>> country_subdivision('IN')[0:2]
+    >>> code_to_subdivision('IN')[0:2]
     [{'code': 'AN', 'name': 'Andaman and Nicobar Islands', 'category': 'union territory'}, {'code': 'CH', 'name': 'Chandigarh', 'category': 'union territory'}]
-    >>> len(country_subdivision('IN'))
+    >>> len(code_to_subdivision('IN'))
     36
-    >>> country_subdivision('US')[0]
+    >>> code_to_subdivision('US')[0]
     {'code': 'DC', 'name': 'District of Columbia', 'category': 'district'}
-    >>> country_subdivision('IR')
+    >>> code_to_subdivision('IR')
     Traceback (most recent call last):
         ...
     NotImplementedError: Provided country code is currently not supported. Please raise a request to add support.
-    >>> country_subdivision('XYZ')
+    >>> code_to_subdivision('XYZ')
     Traceback (most recent call last):
         ...
     ValueError: code should be a valid 2 or 3 letter country code.
-    >>> country_subdivision('AXYZ')
+    >>> code_to_subdivision('AXYZ')
     Traceback (most recent call last):
         ...
     ValueError: code should be a valid 2 or 3 letter country code.    
