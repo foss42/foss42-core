@@ -1,5 +1,5 @@
 from os import path
-from setuptools import setup
+from setuptools import setup, find_packages
 from importlib.machinery import SourceFileLoader
 
 ### To run the tests:
@@ -25,18 +25,18 @@ setup(name="foss42",
       author="foss42",
       author_email="foss42.org@gmail.com",
       keywords='foss42 utility coversion validation generate transform ml bi visualization charts language graphs data map',
-      description="Core Python library used by foss42 APIs.",
+      description="Core Python library used by foss42 Open Source APIs.",
       long_description=LONG_DESCRIPTION,
       long_description_content_type="text/markdown",
       url="https://github.com/foss42/foss42",
       project_urls={
             "Homepage": "https://foss42.com",
-            "Source Code": "https://github.com/foss42/foss42",
-            "Bug Tracker": "https://github.com/foss42/foss42",
-            "Documentation": "https://github.com/foss42/foss42/issues",
+            "Source Code": "https://github.com/foss42/foss42-core",
+            "Bug Tracker": "https://github.com/foss42/foss42-core/issues",
+            "Documentation": "https://foss42.com",
       },
       test_suite="test",
-      packages=['foss42'],
+      packages= find_packages(),
       install_requires=DEPENDENCIES,
       tests_require=DEPENDENCIES,
       python_requires='>=3.10',
