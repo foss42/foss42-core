@@ -262,14 +262,6 @@ COUNTRY_CODES = [{KEY_NAME: 'Afghanistan', KEY_ALPHA2: 'AF', KEY_ALPHA3: 'AFG'},
  {KEY_NAME: "Kosovo", KEY_ALPHA2: 'XK', KEY_ALPHA3: 'XKX'}
  ]
 
-ALPHA2_IDX_MAP =  {row[KEY_ALPHA2]: idx for idx, row in enumerate(COUNTRY_CODES)}
-ALPHA3_IDX_MAP =  {row[KEY_ALPHA3]: idx for idx, row in enumerate(COUNTRY_CODES)}
-NAME_IDX_MAP  = {row[KEY_NAME].lower(): idx for idx, row in enumerate(COUNTRY_CODES)} | \
-                {row[KEY_POPULAR_NAME].lower(): idx for idx, row in enumerate(COUNTRY_CODES) if KEY_POPULAR_NAME in row} | \
-                {term.lower(): idx for idx, row in enumerate(COUNTRY_CODES) if KEY_SEARCH in row for term in row[KEY_SEARCH]}
-
-ALPHA2_FLAG_MAP = {k: ''.join([chr(127397 + ord(a)) for a in k]) for k in ALPHA2_IDX_MAP}
-
 PHONE_CODES = [{KEY_ALPHA2: 'AF', KEY_INTL_PHONE_CODE: '93'},
  {KEY_ALPHA2: 'AL', KEY_INTL_PHONE_CODE: '355'},
  {KEY_ALPHA2: 'DZ', KEY_INTL_PHONE_CODE: '213'},
@@ -521,8 +513,6 @@ PHONE_CODES = [{KEY_ALPHA2: 'AF', KEY_INTL_PHONE_CODE: '93'},
  {KEY_ALPHA2: 'XK', KEY_INTL_PHONE_CODE: '383'}
 ]
 
-ALPHA2_PHONE_MAP = {row[KEY_ALPHA2]: idx for idx, row in enumerate(PHONE_CODES)}
-
 # (Global, Region, Sub-region, Intermediate Region) : alpha2 code map
 
 REGION_COUNTRY_MAP = {('World', None, None, None): ['AQ'],
@@ -549,24 +539,6 @@ REGION_COUNTRY_MAP = {('World', None, None, None): ['AQ'],
  ('World', 'Oceania', 'Melanesia', None): ['FJ', 'NC', 'PG', 'SB', 'VU'],
  ('World', 'Oceania', 'Micronesia', None): ['GU', 'KI', 'MH', 'FM', 'NR', 'MP', 'PW', 'UM'],
  ('World', 'Oceania', 'Polynesia', None): ['AS', 'CK', 'PF', 'NU', 'PN', 'WS', 'TK', 'TO', 'TV', 'WF']}
-
-REGION_ALPHA2_MAP = {}
-SUB_REGION_ALPHA2_MAP = {}
-INT_REGION_ALPHA2_MAP = {}
-for t in REGION_COUNTRY_MAP:
-    world, region, subregion, intregion = t
-    if region is not None:
-        if region not in REGION_ALPHA2_MAP:
-            REGION_ALPHA2_MAP[region] = []
-        REGION_ALPHA2_MAP[region].extend(REGION_COUNTRY_MAP[t])
-    if subregion is not None:
-        if subregion not in SUB_REGION_ALPHA2_MAP:
-            SUB_REGION_ALPHA2_MAP[subregion] = []
-        SUB_REGION_ALPHA2_MAP[subregion].extend(REGION_COUNTRY_MAP[t])       
-    if intregion is not None:
-        if intregion not in INT_REGION_ALPHA2_MAP:
-            INT_REGION_ALPHA2_MAP[intregion] = []
-        INT_REGION_ALPHA2_MAP[intregion].extend(REGION_COUNTRY_MAP[t])     
 
 UNM49_REGION_MAP = {1: 'World',
  2: 'Africa',
@@ -599,8 +571,6 @@ UNM49_REGION_MAP = {1: 'World',
  202: 'Sub-Saharan Africa',
  419: 'Latin America and the Caribbean',
  830: 'Channel Islands'}
-
-REGION_UNM49_MAP = {v: k for k, v in UNM49_REGION_MAP.items()}
 
 UNM49_ALPHA2_MAP = {4: 'AF',
  8: 'AL',
@@ -851,8 +821,6 @@ UNM49_ALPHA2_MAP = {4: 'AF',
  887: 'YE',
  894: 'ZM'}
 
-ALPHA2_UNM49_MAP = {v: k for k, v in UNM49_ALPHA2_MAP.items()}
-
 # Population, Surface Area, Other Stats
 
 ALPHA3_WB_DATA=  {
@@ -1090,9 +1058,6 @@ SUB_CA = [{KEY_CODE: 'AB', KEY_NAME: 'Alberta', KEY_CAT: 'province'},
  {KEY_CODE: 'NU', KEY_NAME: 'Nunavut', KEY_CAT: 'territory'},
  {KEY_CODE: 'YT', KEY_NAME: 'Yukon', KEY_CAT: 'territory'}]
 
-CODE_SUB_CA_MAP = {row[KEY_CODE]: row for row in SUB_CA}
-NAME_SUB_CA_MAP = {row[KEY_NAME]: row for row in SUB_CA}
-
 SUB_KR = [{KEY_CODE: '26', KEY_NAME: 'Busan', KEY_CAT: 'metropolitan city'},
  {KEY_CODE: '27', KEY_NAME: 'Daegu', KEY_CAT: 'metropolitan city'},
  {KEY_CODE: '30', KEY_NAME: 'Daejeon', KEY_CAT: 'metropolitan city'},
@@ -1110,9 +1075,6 @@ SUB_KR = [{KEY_CODE: '26', KEY_NAME: 'Busan', KEY_CAT: 'metropolitan city'},
  {KEY_CODE: '11', KEY_NAME: 'Seoul', KEY_CAT: 'special city'},
  {KEY_CODE: '50', KEY_NAME: 'Sejong', KEY_CAT: 'special self-governing city'},
  {KEY_CODE: '49', KEY_NAME: 'Jeju', KEY_CAT: 'special self-governing province'}]
-
-CODE_SUB_KR_MAP = {row[KEY_CODE]: row for row in SUB_KR}
-NAME_SUB_KR_MAP = {row[KEY_NAME]: row for row in SUB_KR}
 
 SUB_IN = [{KEY_CODE: 'AN', KEY_NAME: 'Andaman and Nicobar Islands', KEY_CAT: 'union territory'},
  {KEY_CODE: 'CH', KEY_NAME: 'Chandigarh', KEY_CAT: 'union territory'},
@@ -1150,9 +1112,6 @@ SUB_IN = [{KEY_CODE: 'AN', KEY_NAME: 'Andaman and Nicobar Islands', KEY_CAT: 'un
  {KEY_CODE: 'UP', KEY_NAME: 'Uttar Pradesh', KEY_CAT: 'state'},
  {KEY_CODE: 'UT', KEY_NAME: 'Uttarakhand', KEY_CAT: 'state'},
  {KEY_CODE: 'WB', KEY_NAME: 'West Bengal', KEY_CAT: 'state'}]
-
-CODE_SUB_IN_MAP = {row[KEY_CODE]: row for row in SUB_IN}
-NAME_SUB_IN_MAP = {row[KEY_NAME]: row for row in SUB_IN}
 
 SUB_JP = [{KEY_CODE: '23', KEY_NAME: 'Aichi', KEY_CAT: 'prefecture'},
  {KEY_CODE: '12', KEY_NAME: 'Chiba', KEY_CAT: 'prefecture'},
@@ -1202,9 +1161,6 @@ SUB_JP = [{KEY_CODE: '23', KEY_NAME: 'Aichi', KEY_CAT: 'prefecture'},
  {KEY_CODE: '30', KEY_NAME: 'Wakayama', KEY_CAT: 'prefecture'},
  {KEY_CODE: '06', KEY_NAME: 'Yamagata', KEY_CAT: 'prefecture'}]
 
-CODE_SUB_JP_MAP = {row[KEY_CODE]: row for row in SUB_JP}
-NAME_SUB_JP_MAP = {row[KEY_NAME]: row for row in SUB_JP}
-
 SUB_CN = [{KEY_CODE: 'HK', KEY_NAME: 'Hong Kong SAR', KEY_CAT: 'special administrative region'},
  {KEY_CODE: 'MO', KEY_NAME: 'Macao SAR', KEY_CAT: 'special administrative region'},
  {KEY_CODE: 'GX', KEY_NAME: 'Guangxi Zhuangzu Zizhiqu', KEY_CAT: 'autonomous region'},
@@ -1240,9 +1196,6 @@ SUB_CN = [{KEY_CODE: 'HK', KEY_NAME: 'Hong Kong SAR', KEY_CAT: 'special administ
  {KEY_CODE: 'YN', KEY_NAME: 'Yunnan Sheng', KEY_CAT: 'province'},
  {KEY_CODE: 'ZJ', KEY_NAME: 'Zhejiang Sheng', KEY_CAT: 'province'}]
 
-CODE_SUB_CN_MAP = {row[KEY_CODE]: row for row in SUB_CN}
-NAME_SUB_CN_MAP = {row[KEY_NAME]: row for row in SUB_CN}
-
 SUB_AU = [{KEY_CODE: 'ACT', KEY_NAME: 'Australian Capital Territory', KEY_CAT: 'territory'},
  {KEY_CODE: 'NSW', KEY_NAME: 'New South Wales', KEY_CAT: 'state'},
  {KEY_CODE: 'NT', KEY_NAME: 'Northern Territory', KEY_CAT: 'territory'},
@@ -1251,9 +1204,6 @@ SUB_AU = [{KEY_CODE: 'ACT', KEY_NAME: 'Australian Capital Territory', KEY_CAT: '
  {KEY_CODE: 'TAS', KEY_NAME: 'Tasmania', KEY_CAT: 'state'},
  {KEY_CODE: 'VIC', KEY_NAME: 'Victoria', KEY_CAT: 'state'},
  {KEY_CODE: 'WA', KEY_NAME: 'Western Australia', KEY_CAT: 'state'}]
-
-CODE_SUB_AU_MAP = {row[KEY_CODE]: row for row in SUB_AU}
-NAME_SUB_AU_MAP = {row[KEY_NAME]: row for row in SUB_AU}
 
 SUB_US = [{KEY_CODE: 'DC', KEY_NAME: 'District of Columbia', KEY_CAT: 'district'},
  {KEY_CODE: 'AS', KEY_NAME: 'American Samoa', KEY_CAT: 'outlying area'},
@@ -1313,5 +1263,12 @@ SUB_US = [{KEY_CODE: 'DC', KEY_NAME: 'District of Columbia', KEY_CAT: 'district'
  {KEY_CODE: 'WI', KEY_NAME: 'Wisconsin', KEY_CAT: 'state'},
  {KEY_CODE: 'WY', KEY_NAME: 'Wyoming', KEY_CAT: 'state'}]
 
-CODE_SUB_US_MAP = {row[KEY_CODE]: row for row in SUB_US}
-NAME_SUB_US_MAP = {row[KEY_NAME]: row for row in SUB_US}
+SUB_SUPPORTED = {
+    "CA": SUB_CA,
+    "KR": SUB_KR,
+    "IN": SUB_IN,
+    "JP": SUB_JP,
+    "CN": SUB_CN,
+    "AU": SUB_AU,
+    "US": SUB_US,
+}

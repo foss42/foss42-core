@@ -1,6 +1,6 @@
 # Utility Translators for various types of common or obscure lingo
 from typeguard import typechecked
-from .db_helpers import LEET_CHAR, CHAR_TO_NUMBER, UPSIDE_DOWN, MIRROR
+from foss42.helpers.text.char import LEET_CHAR, CHAR_TO_NUMBER, UPSIDE_DOWN, MIRROR
 
 @typechecked
 def phone2numeric(text: str) -> str:

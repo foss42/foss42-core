@@ -2,7 +2,7 @@ import re
 from enum import Enum
 from typeguard import typechecked
 import titlecase as tc
-from .db_words import SMALL_TITLE
+from foss42.helpers.text.english import SMALL_TITLE
 
 SMALL_WORD = "|".join(re.escape(s) for s in SMALL_TITLE)
 tc.set_small_word_list(SMALL_WORD)
