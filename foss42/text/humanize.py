@@ -1,5 +1,5 @@
 import math
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 from typeguard import typechecked
 from foss42.helpers.text.humanize import *
@@ -227,7 +227,19 @@ def humanize_rank(num: int | str) -> str:
 @typechecked
 def parse_dt(dt: str | datetime,
              fmt: Optional[str] = None) -> datetime:
-
+    '''
+    Parse a date in form of string or datetime object and returns it with timezone.
+    >>> parse_dt('2009-12-17T08:31:29')
+    datetime.datetime(2009, 12, 17, 8, 31, 29, tzinfo=datetime.timezone.utc)
+    >>> parse_dt('2009-12-17T08:31:29Z')
+    datetime.datetime(2009, 12, 17, 8, 31, 29, tzinfo=datetime.timezone.utc)
+    >>> parse_dt('2009-12-17T08:31:29+01:00')
+    datetime.datetime(2009, 12, 17, 8, 31, 29, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600)))
+    >>> parse_dt(datetime(2023, 3, 7, 14))
+    datetime.datetime(2023, 3, 7, 14, 0, tzinfo=datetime.timezone.utc)
+    >>> parse_dt("14 Jan, 2023", "%d %b, %Y")
+    datetime.datetime(2023, 1, 14, 0, 0, tzinfo=datetime.timezone.utc)
+    '''
     dt_val = None
     try:
         if type(dt) is str:
@@ -239,6 +251,8 @@ def parse_dt(dt: str | datetime,
             dt_val = dt
         else:
             raise TypeError("Incorrect type of input date.")
+        if dt_val.tzinfo is None:
+            dt_val = dt_val.replace(tzinfo=timezone.utc)
     except Exception as e:
         raise ValueError("Error parsing input date.")
     return dt_val
@@ -321,6 +335,10 @@ def humanize_time(dt: str | datetime,
     '1 y'
     >>> humanize_time('2010-12-17T08:31:29', '2008-12-17T16:30:00', units = "SHORT", round_down = False) 
     '2 y'
+    >>> humanize_time('2009-12-17T08:31:29Z', '2009-12-17T16:30:00') 
+    '7 hours'
+    >>> humanize_time('2009-12-17T08:31:29', '2009-12-17T16:30:00Z', round_down = False) 
+    '8 hours'
     """
 
     dt_val = None
@@ -330,7 +348,7 @@ def humanize_time(dt: str | datetime,
         if dt_ref is not None:
             dt_ref = parse_dt(dt_ref, fmt)
         else:
-            dt_ref = datetime.now()
+            dt_ref = datetime.now(timezone.utc)
     except Exception as e:
         raise e 
     
