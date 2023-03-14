@@ -9,6 +9,7 @@ KEY_INTL_PHONE_CODE = "intl_phone_code"
 KEY_AREA_PHONE_CODE = "area_phone_code"
 KEY_AREA = "area"
 KEY_POPULATION = "population"
+KEY_FEMALE_PERCENT = "population_female_percent"
 
 COUNTRY_CODES = [{KEY_NAME: 'Afghanistan', KEY_ALPHA2: 'AF', KEY_ALPHA3: 'AFG'},
  {KEY_NAME: 'Albania', KEY_ALPHA2: 'AL', KEY_ALPHA3: 'ALB'},
@@ -22,7 +23,7 @@ COUNTRY_CODES = [{KEY_NAME: 'Afghanistan', KEY_ALPHA2: 'AF', KEY_ALPHA3: 'AFG'},
  {KEY_NAME: 'Argentina', KEY_ALPHA2: 'AR', KEY_ALPHA3: 'ARG'},
  {KEY_NAME: 'Armenia', KEY_ALPHA2: 'AM', KEY_ALPHA3: 'ARM'},
  {KEY_NAME: 'Aruba', KEY_ALPHA2: 'AW', KEY_ALPHA3: 'ABW'},
- {KEY_NAME: 'Australia', KEY_ALPHA2: 'AU', KEY_ALPHA3: 'AUS'},
+ {KEY_NAME: 'Australia', KEY_ALPHA2: 'AU', KEY_ALPHA3: 'AUS', KEY_FEMALE_PERCENT:50.36},
  {KEY_NAME: 'Austria', KEY_ALPHA2: 'AT', KEY_ALPHA3: 'AUT'},
  {KEY_NAME: 'Azerbaijan', KEY_ALPHA2: 'AZ', KEY_ALPHA3: 'AZE'},
  {KEY_NAME: 'Bahamas (the)', KEY_ALPHA2: 'BS', KEY_ALPHA3: 'BHS', KEY_POPULAR_NAME: 'Bahamas'},
