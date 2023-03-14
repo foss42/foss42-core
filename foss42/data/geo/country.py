@@ -9,7 +9,6 @@ KEY_INTL_PHONE_CODE = "intl_phone_code"
 KEY_AREA_PHONE_CODE = "area_phone_code"
 KEY_AREA = "area"
 KEY_POPULATION = "population"
-KEY_FEMALE_PERCENT = "population_female_percent"
 
 COUNTRY_CODES = [{KEY_NAME: 'Afghanistan', KEY_ALPHA2: 'AF', KEY_ALPHA3: 'AFG'},
  {KEY_NAME: 'Albania', KEY_ALPHA2: 'AL', KEY_ALPHA3: 'ALB'},
