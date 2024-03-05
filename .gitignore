@@ -4,3 +4,4 @@ foss42.egg-info/
 .vscode/
 build/
 dist/
+.coverage

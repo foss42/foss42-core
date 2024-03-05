@@ -15,11 +15,12 @@ DUPLICATE_DASH_PATTERN = re.compile(r'-{2,}')
 NUMBERS_PATTERN = re.compile(r'(?<=\d),(?=\d)')
 DEFAULT_SEPARATOR = '-'
 
+
 @typechecked
-def slugify(text: str, 
-            separator: str = DEFAULT_SEPARATOR, 
-            regex_pattern: str = None,
-            replacements: Optional[list[tuple[str, str]]]= None) -> str:
+def slugify(text: str,
+            separator: str = DEFAULT_SEPARATOR,
+            regex_pattern: Optional[str] = None,
+            replacements: Optional[list[tuple[str, str]]] = None) -> str:
     """
     Make a slug from the given text.
 
@@ -85,7 +86,8 @@ def slugify(text: str,
     if not isinstance(text, str):
         text = str(text, 'utf-8', 'ignore')
 
-    text = CHAR_ENTITY_PATTERN.sub(lambda m: chr(name2codepoint[m.group(1)]), text)
+    text = CHAR_ENTITY_PATTERN.sub(
+        lambda m: chr(name2codepoint[m.group(1)]), text)
 
     # decimal character reference
     try:
@@ -117,7 +119,8 @@ def slugify(text: str,
     text = re.sub(pattern, DEFAULT_SEPARATOR, text)
 
     # remove redundant
-    text = DUPLICATE_DASH_PATTERN.sub(DEFAULT_SEPARATOR, text).strip(DEFAULT_SEPARATOR)
+    text = DUPLICATE_DASH_PATTERN.sub(
+        DEFAULT_SEPARATOR, text).strip(DEFAULT_SEPARATOR)
 
     # finalize user-specific replacements
     if replacements:
