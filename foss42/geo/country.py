@@ -197,7 +197,7 @@ def code_to_data(code: str) -> dict:
     >>> code_to_data('KR')
     {'area': 100410.0, 'population': 51744876}
     >>> code_to_data('IND')
-    {'area': 3287260.0, 'population': 1407563842}
+    {'area': 3287260.0, 'population': 1407563842, 'population_female_percent': 48.39}
     >>> code_to_data('ZI')
     Traceback (most recent call last):
         ...
