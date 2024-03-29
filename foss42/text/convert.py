@@ -326,3 +326,43 @@ def kebab_to_lower(text: str) -> str:
     """
 
     return " ".join(text.strip().lower().split("-"))
+
+@typechecked
+def bytesToString(text: bytes) -> str:
+    r"""Coverts text in bytes to corresponding string representation.
+    :type text: bytes
+    :param text: the text in bytes
+    :rtype: string
+    :return: text in string
+
+    >>> bytesToString(b'hello')
+    'hello'
+    >>> bytesToString(b'\x80abc')
+    '\x80abc'
+    >>> bytesToString(b'\xc2\x80abc')
+    '\xc2\x80abc'
+    """
+
+    try:
+        return ''.join(map(chr, list(text)))
+    except Exception as e:
+        raise e
+
+@typechecked
+def stringToBytes(text: str) -> bytes:
+    r"""Coverts text in string to corresponding bytes representation.
+    :type text: string
+    :param text: the text in string
+    :rtype: bytes
+    :return: text in bytes
+
+    >>> stringToBytes('hello')
+    b'hello'
+    >>> stringToBytes('\x80abc')
+    b'\x80abc'
+    """
+
+    try:
+        return bytes(map(ord, list(text)))
+    except Exception as e:
+        raise e
