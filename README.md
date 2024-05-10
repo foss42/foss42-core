@@ -15,7 +15,31 @@ To learn more about the project check out:
 pip3 install foss42
 ```
 
-## Testing
+## Setting Up Environment and Testing
+
+Create a new directory for your project and navigate to it:
+
+```
+$ mkdir my_project
+$ cd my_project
+```
+
+Create a virtual environment (optional but recommended):
+
+```
+$ python3 -m venv env
+```
+
+Activate the virtual environment (On Windows):
+
+```
+$ .\env\Scripts\activate
+```
+Activate the virtual environment (On macOS and Linux):
+
+```
+$ source env/bin/activate
+```
 
 Install `pytest`
 
@@ -23,7 +47,15 @@ Install `pytest`
 $ pip3 install pytest
 ```
 
-Clone the repo, set it as the current working directory and run the tests using the command:
+
+Clone the repository and navigate to the core directory:
+
+```
+$ git clone https://github.com/foss42/foss42-core.git
+$ cd foss42-core
+```
+
+Run the tests using the following command:
 
 ```
 $ pytest
