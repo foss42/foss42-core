@@ -4,7 +4,7 @@
 ![PyPI](https://img.shields.io/pypi/v/foss42?logo=python&logoColor=yellow&style=for-the-badge)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/foss42?logo=python&logoColor=yellow&style=for-the-badge)
 
-Core Python library for foss42 Open Source APIs. 
+Core Python library for [foss42 Open Source APIs](https://github.com/foss42/api). 
 
 ## Installation
 
