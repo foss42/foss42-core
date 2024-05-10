@@ -6,9 +6,6 @@
 
 Core Python library for foss42 Open Source APIs. 
 
-To learn more about the project check out:
-- [GitHub Organization Page](https://github.com/foss42) 
-
 ## Installation
 
 ```
