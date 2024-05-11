@@ -1264,6 +1264,22 @@ SUB_US = [{KEY_CODE: 'DC', KEY_NAME: 'District of Columbia', KEY_CAT: 'district'
  {KEY_CODE: 'WI', KEY_NAME: 'Wisconsin', KEY_CAT: 'state'},
  {KEY_CODE: 'WY', KEY_NAME: 'Wyoming', KEY_CAT: 'state'}]
 
+SUB_SG = [{KEY_CODE: 'SG01', KEY_NAME: 'Central Region', KEY_CAT: 'district'},
+ {KEY_CODE: 'SG02', KEY_NAME: 'East Region', KEY_CAT: 'district'},
+ {KEY_CODE: 'SG03', KEY_NAME: 'North Region', KEY_CAT: 'district'},
+ {KEY_CODE: 'SG04', KEY_NAME: 'North-East Region', KEY_CAT: 'district'},
+ {KEY_CODE: 'SG05', KEY_NAME: 'West Region', KEY_CAT: 'district'}]
+
+SUB_AE = [{KEY_CODE: 'AZ', KEY_NAME: 'Abu Dhabi', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'AJ', KEY_NAME: 'Ajman', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'FU', KEY_NAME: 'Fujairah', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'SH', KEY_NAME: 'Sharjah', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'DU', KEY_NAME: 'Dubai', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'RK', KEY_NAME: 'Ras al-Khaimah', KEY_CAT: 'emirate'},
+ {KEY_CODE: 'UQ', KEY_NAME: 'Umm al-Quwain', KEY_CAT: 'emirate'}]
+
+
+
 SUB_SUPPORTED = {
     "CA": SUB_CA,
     "KR": SUB_KR,
@@ -1272,4 +1288,6 @@ SUB_SUPPORTED = {
     "CN": SUB_CN,
     "AU": SUB_AU,
     "US": SUB_US,
+    "SG": SUB_SG,
+    "AE": SUB_AE,
 }
