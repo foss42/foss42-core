@@ -5,3 +5,4 @@ foss42.egg-info/
 build/
 dist/
 .coverage
+.DS_Store
