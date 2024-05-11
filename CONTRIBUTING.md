@@ -2,7 +2,7 @@
 
 Contributors can add new useful functions to the foss42 core library or new data (check `foss42/data/`) by following the below steps:
 
-**Step 1**: Raise a new issue that you want to add new function/data. We will assign the issue to you and label it.  
+**Step 1**: Raise a **new issue** stating that you want to add new function/data. We will assign the issue to you and label it.  
 **Step 2**: Star and fork THIS repository.  
 **Step 3**: Now in your fork, make the required changes.  
 **Step 4**: Raise a PR with your changes.  
