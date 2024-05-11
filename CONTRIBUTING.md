@@ -11,8 +11,8 @@ Contributors can add new useful functions to the foss42 core library or new data
 ## Setting up Dev env
 
 - Install the latest version of Python.  
-- Clone the repo to your local sytem.  
-- Use terminal to navigate inside the repo.  
+- Clone the repo to your local sytem using `git clone https://github.com/foss42/foss42-core.git`
+- Use terminal to navigate inside the folder (`cd foss42-core`).  
 - Execute `pip3 install -e .` to install the library locally.  
 - Now you can import and use the library in the local enviroment.
 
