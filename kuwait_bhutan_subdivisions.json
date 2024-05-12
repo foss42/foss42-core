@@ -1,0 +1,21 @@
+// kuwait_subdivisions.json
+{
+  "Kuwait": {
+    "Al Ahmadi": ["AH"],
+    "Al Farwaniyah": ["FA"],
+    "Hawalli": ["HA"],
+    "Al Jahra": ["JA"],
+    "Capital": ["CA"],
+    // Add more sub-divisions as needed
+  }
+}
+// bhutan_subdivisions.json
+{
+  "Bhutan": {
+    "Bumthang": ["33"],
+    "Chhukha": ["12"],
+    "Dagana": ["22"],
+    "Gasa": ["GA"],
+    // Add more sub-divisions as needed
+  }
+}
