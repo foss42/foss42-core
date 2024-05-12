@@ -1,6 +1,7 @@
 from os import path
 from setuptools import setup, find_packages
 from importlib.machinery import SourceFileLoader
+import json
 
 ### To run the tests:
 # python setup.py test
@@ -19,6 +20,14 @@ DEPENDENCIES = ["Unidecode",
                 "titlecase",
                 "typeguard",
                 ]
+# Add the load_subdivisions function here
+def load_subdivisions(country):
+    with open(f"{country.lower()}_subdivisions.json", "r") as f:
+        return json.load(f)
+brazil_subdivisions = load_subdivisions("Brazil")
+romania_subdivisions = load_subdivisions("Romania")
+kuwait_subdivisions = load_subdivisions("Kuwait")
+bhutan_subdivisions = load_subdivisions("Bhutan")
 
 setup(name="foss42",
       version=str(version.VERSION),
