@@ -1324,12 +1324,12 @@ SUB_BR = [{KEY_CODE: 'AC', KEY_NAME: 'Acre', KEY_CAT: 'state'},
  {KEY_CODE: 'SE', KEY_NAME: 'Sergipe', KEY_CAT: 'state'},
  {KEY_CODE: 'TO', KEY_NAME: 'Tocantins', KEY_CAT: 'state'}]
 
-SUB_KW = [{KEY_CODE: 'AH', KEY_NAME: 'Al Ahmadi', KEY_CAT: 'governorate'},
- {KEY_CODE: 'FA', KEY_NAME: 'Al Farwaniyah', KEY_CAT: 'governorate'},
- {KEY_CODE: 'HA', KEY_NAME: 'Hawalli', KEY_CAT: 'governorate'},
- {KEY_CODE: 'JA', KEY_NAME: 'Jahra', KEY_CAT: 'governorate'},
- {KEY_CODE: 'KU', KEY_NAME: 'Kuwait City', KEY_CAT: 'governorate'},
- {KEY_CODE: 'MU', KEY_NAME: 'Mubarak Al-Kabeer', KEY_CAT: 'governorate'}]
+SUB_KW = [{KEY_CODE: 'AH', KEY_NAME: 'Al Aḩmadī', KEY_CAT: 'governorate'},
+ {KEY_CODE: 'FA', KEY_NAME: 'Al Farwānīyah', KEY_CAT: 'governorate'},
+ {KEY_CODE: 'HA', KEY_NAME: 'Ḩawallī', KEY_CAT: 'governorate'},
+ {KEY_CODE: 'JA', KEY_NAME: 'Al Jahrā’', KEY_CAT: 'governorate'},
+ {KEY_CODE: 'KU', KEY_NAME: 'Al ‘Āşimah', KEY_CAT: 'governorate'},
+ {KEY_CODE: 'MU', KEY_NAME: 'Mubārak al Kabīr', KEY_CAT: 'governorate'}]
 
 SUB_BT = [{KEY_CODE: '15', KEY_NAME: 'Thimphu', KEY_CAT: 'district'},
  {KEY_CODE: '12', KEY_NAME: 'Chhukha', KEY_CAT: 'district'},
