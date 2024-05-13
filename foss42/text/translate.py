@@ -51,8 +51,8 @@ def text2emoji(text: str) -> str:
     """
     Convert a string with letters into emoji equivalent.
 
-    >>> phone2numeric('1-800-GOT-JUNK')
-    '1-800-468-5865'
+    >>> text2emoji('this is a test message')
+    '🤣🤐🤨🤑  🤨🤑  😇  🤣😘🤑🤣  😋😘🤑🤑😇🤣😘'
     """
     
     return "".join(EMOJI.get(c, "\U0001F933") for c in text.upper())
