@@ -1349,6 +1349,33 @@ SUB_ES = [{KEY_CODE: 'C', KEY_NAME: 'La Coruña', KEY_CAT: 'province'},
  {KEY_CODE: 'CE', KEY_NAME: 'Ceuta', KEY_CAT: 'autonomous city in North Africa'},
  {KEY_CODE: 'ML', KEY_NAME: 'Melilla', KEY_CAT: 'autonomous city in North Africa'}]
 
+SUB_CH = [{KEY_CODE: 'AG', KEY_NAME: 'Aargau', KEY_CAT: 'canton'},
+  {KEY_CODE: 'AR', KEY_NAME: 'Appenzell Ausserrhoden', KEY_CAT: 'canton'},
+  {KEY_CODE: 'AI', KEY_NAME: 'Appenzell Innerrhoden', KEY_CAT: 'canton'},
+  {KEY_CODE: 'BL', KEY_NAME: 'Basel-Landschaft', KEY_CAT: 'canton'},
+  {KEY_CODE: 'BS', KEY_NAME: 'Basel-Stadt', KEY_CAT: 'canton'},
+  {KEY_CODE: 'BE', KEY_NAME: 'Bern', KEY_CAT: 'canton'},
+  {KEY_CODE: 'FR', KEY_NAME: 'Freiburg', KEY_CAT: 'canton'},
+  {KEY_CODE: 'GE', KEY_NAME: 'Genf', KEY_CAT: 'canton'},
+  {KEY_CODE: 'GL', KEY_NAME: 'Glarus', KEY_CAT: 'canton'},
+  {KEY_CODE: 'GR', KEY_NAME: 'Graubünden', KEY_CAT: 'canton'},
+  {KEY_CODE: 'JU', KEY_NAME: 'Jura', KEY_CAT: 'canton'},
+  {KEY_CODE: 'LU', KEY_NAME: 'Luzern', KEY_CAT: 'canton'},
+  {KEY_CODE: 'NE', KEY_NAME: 'Neuenburg', KEY_CAT: 'canton'},
+  {KEY_CODE: 'NW', KEY_NAME: 'Nidwalden', KEY_CAT: 'canton'},
+  {KEY_CODE: 'OW', KEY_NAME: 'Obwalden', KEY_CAT: 'canton'},
+  {KEY_CODE: 'SG', KEY_NAME: 'Sankt Gallen', KEY_CAT: 'canton'},
+  {KEY_CODE: 'SH', KEY_NAME: 'Schaffhausen', KEY_CAT: 'canton'},
+  {KEY_CODE: 'SZ', KEY_NAME: 'Schwyz', KEY_CAT: 'canton'},
+  {KEY_CODE: 'SO', KEY_NAME: 'Solothurn', KEY_CAT: 'canton'},
+  {KEY_CODE: 'TG', KEY_NAME: 'Thurgau', KEY_CAT: 'canton'},
+  {KEY_CODE: 'TI', KEY_NAME: 'Tessin', KEY_CAT: 'canton'},
+  {KEY_CODE: 'UR', KEY_NAME: 'Uri', KEY_CAT: 'canton'},
+  {KEY_CODE: 'VS', KEY_NAME: 'Wallis', KEY_CAT: 'canton'},
+  {KEY_CODE: 'VD', KEY_NAME: 'Waadt', KEY_CAT: 'canton'},
+  {KEY_CODE: 'ZG', KEY_NAME: 'Zug', KEY_CAT: 'canton'},
+  {KEY_CODE: 'ZH', KEY_NAME: 'Zürich', KEY_CAT: 'canton'}]
+
 SUB_SUPPORTED = {
     "CA": SUB_CA,
     "KR": SUB_KR,
@@ -1360,4 +1387,6 @@ SUB_SUPPORTED = {
     "SG": SUB_SG,
     "AE": SUB_AE,
     "ES": SUB_ES,
+    "CH": SUB_CH,
+ 
 }
