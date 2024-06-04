@@ -1348,6 +1348,18 @@ SUB_ES = [{KEY_CODE: 'C', KEY_NAME: 'La Coruña', KEY_CAT: 'province'},
  {KEY_CODE: 'VC', KEY_NAME: 'Valenciana, Comunidad', KEY_CAT: 'autonomous community'},
  {KEY_CODE: 'CE', KEY_NAME: 'Ceuta', KEY_CAT: 'autonomous city in North Africa'},
  {KEY_CODE: 'ML', KEY_NAME: 'Melilla', KEY_CAT: 'autonomous city in North Africa'}]
+SUB_AL = [{KEY_CODE: 'DR', KEY_NAME: 'Durrës', KEY_CAT: 'county'},
+ {KEY_CODE: 'EL', KEY_NAME: 'Elbasan', KEY_CAT: 'county'},
+ {KEY_CODE: 'FI', KEY_NAME: 'Fier', KEY_CAT: 'county'},
+ {KEY_CODE: 'GJ', KEY_NAME: 'Gjirokastër', KEY_CAT: 'county'},
+ {KEY_CODE: 'GR', KEY_NAME: 'Gramsh', KEY_CAT: 'county'},
+ {KEY_CODE: 'KR', KEY_NAME: 'Korçë', KEY_CAT: 'county'},
+ {KEY_CODE: 'KU', KEY_NAME: 'Kukës', KEY_CAT: 'county'},
+ {KEY_CODE: 'LE', KEY_NAME: 'Lezhë', KEY_CAT: 'county'},
+ {KEY_CODE: 'DV', KEY_NAME: 'Dibër', KEY_CAT: 'county'},
+ {KEY_CODE: 'SH', KEY_NAME: 'Shkodër', KEY_CAT: 'county'},
+ {KEY_CODE: 'TP', KEY_NAME: 'Tirana', KEY_CAT: 'county'},
+ {KEY_CODE: 'VL', KEY_NAME: 'Vlorë', KEY_CAT: 'county'}]
 
 SUB_SUPPORTED = {
     "CA": SUB_CA,
@@ -1360,4 +1372,5 @@ SUB_SUPPORTED = {
     "SG": SUB_SG,
     "AE": SUB_AE,
     "ES": SUB_ES,
+    "AL":SUB_AL,
 }
