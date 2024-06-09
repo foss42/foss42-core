@@ -1349,6 +1349,27 @@ SUB_ES = [{KEY_CODE: 'C', KEY_NAME: 'La Coruña', KEY_CAT: 'province'},
  {KEY_CODE: 'CE', KEY_NAME: 'Ceuta', KEY_CAT: 'autonomous city in North Africa'},
  {KEY_CODE: 'ML', KEY_NAME: 'Melilla', KEY_CAT: 'autonomous city in North Africa'}]
 
+SUB_IT = [{KEY_CODE: 'AB', KEY_NAME: 'Abruzzo', KEY_CAT: 'State'},
+          {KEY_CODE: 'BA', KEY_NAME: 'Basilicata', KEY_CAT: 'State'},
+          {KEY_CODE: 'CA', KEY_NAME: 'Calabria ', KEY_CAT: 'State'},
+          {KEY_CODE: 'CM', KEY_NAME: 'Campania ', KEY_CAT: 'State'},
+          {KEY_CODE: 'EM', KEY_NAME: 'Emilia-Romagna', KEY_CAT: 'State'},
+          {KEY_CODE: 'FV', KEY_NAME: 'Friuli-Venezia Giulia', KEY_CAT: 'State'},
+          {KEY_CODE: 'LZ', KEY_NAME: 'Lazio', KEY_CAT: 'State'},
+          {KEY_CODE: 'LG', KEY_NAME: 'Liguria', KEY_CAT: 'State'},
+          {KEY_CODE: 'LM', KEY_NAME: 'Lombardy', KEY_CAT: 'State'},
+          {KEY_CODE: 'MR', KEY_NAME: 'Marche', KEY_CAT: 'State'},
+          {KEY_CODE: 'MO', KEY_NAME: 'Molise', KEY_CAT: 'State'},
+          {KEY_CODE: 'PM', KEY_NAME: 'Piedmont', KEY_CAT: 'State'},
+          {KEY_CODE: 'PU', KEY_NAME: 'Apulia', KEY_CAT: 'State'},
+          {KEY_CODE: 'SD', KEY_NAME: 'Sardinia', KEY_CAT: 'State'},
+          {KEY_CODE: 'SI', KEY_NAME: 'Sicily', KEY_CAT: 'State'},
+          {KEY_CODE: 'TS', KEY_NAME: 'Tuscany', KEY_CAT: 'State'},
+          {KEY_CODE: 'TN', KEY_NAME: 'Trentino-Alto Adige', KEY_CAT: 'State'},
+          {KEY_CODE: 'UM', KEY_NAME: 'Umbria', KEY_CAT: 'State'},
+          {KEY_CODE: 'VA', KEY_NAME: 'Valle d\'Aosta', KEY_CAT: 'State'},
+          {KEY_CODE: 'VN', KEY_NAME: 'Veneto', KEY_CAT: 'State'}]
+
 SUB_SUPPORTED = {
     "CA": SUB_CA,
     "KR": SUB_KR,
