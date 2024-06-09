@@ -1631,6 +1631,24 @@ SUB_GB = [{KEY_CODE: 'ENG', KEY_NAME: 'England', KEY_CAT: 'country'},
           {KEY_CODE: 'GB-VGL', KEY_NAME: 'Vale of Glamorgan, The [Bro Morgannwg GB-BMG]', KEY_CAT: 'unitary authority'},
           {KEY_CODE: 'GB-WRX', KEY_NAME: 'Wrexham [Wrecsam GB-WRC]', KEY_CAT: 'unitary authority'}]
 
+SUB_PH = [{KEY_CODE: 'NCR', KEY_NAME: 'National Capital Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'CAR', KEY_NAME: 'Cordillera Administrative Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region I', KEY_NAME: 'Ilocos Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region II', KEY_NAME: 'Cagayan Valley', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region III', KEY_NAME: 'Central Luzon', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region IV-A', KEY_NAME: 'Calabarzon', KEY_CAT: 'region'},
+          {KEY_CODE: 'Mimaropa', KEY_NAME: 'Southwestern Tagalog Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region V', KEY_NAME: 'Bicol Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region VI', KEY_NAME: 'Western Visayas', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region VII', KEY_NAME: 'Central Visayas', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region VIII', KEY_NAME: 'Eastern Visayas', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region IX', KEY_NAME: 'Zamboanga Peninsula', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region X', KEY_NAME: 'Northern Mindanao', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region XI', KEY_NAME: 'Davao Region', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region XII', KEY_NAME: 'Soccsksargen', KEY_CAT: 'region'},
+          {KEY_CODE: 'Region XIII', KEY_NAME: 'Caraga', KEY_CAT: 'region'},
+          {KEY_CODE: 'BARMM', KEY_NAME: 'Bangsamoro', KEY_CAT: 'region'}]
+
 SUB_SUPPORTED = {
     "CA": SUB_CA,
     "KR": SUB_KR,
@@ -1647,4 +1665,5 @@ SUB_SUPPORTED = {
     "BT": SUB_BT,
     "NP": SUB_NP,
     "GB": SUB_GB,
+    "PH": SUB_PH,
 }
