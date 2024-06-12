@@ -1348,7 +1348,9 @@ SUB_ES = [{KEY_CODE: 'C', KEY_NAME: 'La Coruña', KEY_CAT: 'province'},
  {KEY_CODE: 'VC', KEY_NAME: 'Valenciana, Comunidad', KEY_CAT: 'autonomous community'},
  {KEY_CODE: 'CE', KEY_NAME: 'Ceuta', KEY_CAT: 'autonomous city in North Africa'},
  {KEY_CODE: 'ML', KEY_NAME: 'Melilla', KEY_CAT: 'autonomous city in North Africa'}]
-SUB_AL = [{KEY_CODE: 'DR', KEY_NAME: 'Durrës', KEY_CAT: 'county'},
+
+SUB_AL = [
+ {KEY_CODE: 'DR', KEY_NAME: 'Durrës', KEY_CAT: 'county'},
  {KEY_CODE: 'EL', KEY_NAME: 'Elbasan', KEY_CAT: 'county'},
  {KEY_CODE: 'FI', KEY_NAME: 'Fier', KEY_CAT: 'county'},
  {KEY_CODE: 'GJ', KEY_NAME: 'Gjirokastër', KEY_CAT: 'county'},
@@ -1359,8 +1361,11 @@ SUB_AL = [{KEY_CODE: 'DR', KEY_NAME: 'Durrës', KEY_CAT: 'county'},
  {KEY_CODE: 'DV', KEY_NAME: 'Dibër', KEY_CAT: 'county'},
  {KEY_CODE: 'SH', KEY_NAME: 'Shkodër', KEY_CAT: 'county'},
  {KEY_CODE: 'TP', KEY_NAME: 'Tirana', KEY_CAT: 'county'},
- {KEY_CODE: 'VL', KEY_NAME: 'Vlorë', KEY_CAT: 'county'}]
-SUB_AF = [{KEY_CODE: 'BAL', KEY_NAME: 'Balkh', KEY_CAT: 'province'},
+ {KEY_CODE: 'VL', KEY_NAME: 'Vlorë', KEY_CAT: 'county'}
+]
+
+SUB_AF = [
+ {KEY_CODE: 'BAL', KEY_NAME: 'Balkh', KEY_CAT: 'province'},
  {KEY_CODE: 'BAM', KEY_NAME: 'Bamyan', KEY_CAT: 'province'},
  {KEY_CODE: 'BDG', KEY_NAME: 'Badghis', KEY_CAT: 'province'},
  {KEY_CODE: 'BDS', KEY_NAME: 'Badakhshan', KEY_CAT: 'province'},
@@ -1393,7 +1398,8 @@ SUB_AF = [{KEY_CODE: 'BAL', KEY_NAME: 'Balkh', KEY_CAT: 'province'},
  {KEY_CODE: 'TAK', KEY_NAME: 'Takhar', KEY_CAT: 'province'},
  {KEY_CODE: 'URU', KEY_NAME: 'Urozgan', KEY_CAT: 'province'},
  {KEY_CODE: 'WAR', KEY_NAME: 'Wardak', KEY_CAT: 'province'},
- {KEY_CODE: 'ZAB', KEY_NAME: 'Zabul', KEY_CAT: 'province'}]
+ {KEY_CODE: 'ZAB', KEY_NAME: 'Zabul', KEY_CAT: 'province'}
+]
 
 
 SUB_SUPPORTED = {
@@ -1407,7 +1413,6 @@ SUB_SUPPORTED = {
     "SG": SUB_SG,
     "AE": SUB_AE,
     "ES": SUB_ES,
-    "AL":SUB_AL,
-    "AF":SUB_AF,
- 
+    "AL": SUB_AL,
+    "AF": SUB_AF,
 }
