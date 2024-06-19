@@ -1103,7 +1103,7 @@ SUB_IN = [{KEY_CODE: 'AN', KEY_NAME: 'Andaman and Nicobar Islands', KEY_CAT: 'un
  {KEY_CODE: 'ML', KEY_NAME: 'Meghalaya', KEY_CAT: 'state'},
  {KEY_CODE: 'MZ', KEY_NAME: 'Mizoram', KEY_CAT: 'state'},
  {KEY_CODE: 'NL', KEY_NAME: 'Nagaland', KEY_CAT: 'state'},
- {KEY_CODE: 'OR', KEY_NAME: 'Odisha', KEY_CAT: 'state'},
+ {KEY_CODE: 'OD', KEY_NAME: 'Odisha', KEY_CAT: 'state'},
  {KEY_CODE: 'PB', KEY_NAME: 'Punjab', KEY_CAT: 'state'},
  {KEY_CODE: 'RJ', KEY_NAME: 'Rajasthan', KEY_CAT: 'state'},
  {KEY_CODE: 'SK', KEY_NAME: 'Sikkim', KEY_CAT: 'state'},
