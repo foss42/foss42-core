@@ -1089,7 +1089,7 @@ SUB_IN = [{KEY_CODE: 'AN', KEY_NAME: 'Andaman and Nicobar Islands', KEY_CAT: 'un
  {KEY_CODE: 'AR', KEY_NAME: 'Arunachal Pradesh', KEY_CAT: 'state'},
  {KEY_CODE: 'AS', KEY_NAME: 'Assam', KEY_CAT: 'state'},
  {KEY_CODE: 'BR', KEY_NAME: 'Bihar', KEY_CAT: 'state'},
- {KEY_CODE: 'CT', KEY_NAME: 'Chhattisgarh', KEY_CAT: 'state'},
+ {KEY_CODE: 'CG', KEY_NAME: 'Chhattisgarh', KEY_CAT: 'state'},
  {KEY_CODE: 'GA', KEY_NAME: 'Goa', KEY_CAT: 'state'},
  {KEY_CODE: 'GJ', KEY_NAME: 'Gujarat', KEY_CAT: 'state'},
  {KEY_CODE: 'HR', KEY_NAME: 'Haryana', KEY_CAT: 'state'},
@@ -1108,10 +1108,10 @@ SUB_IN = [{KEY_CODE: 'AN', KEY_NAME: 'Andaman and Nicobar Islands', KEY_CAT: 'un
  {KEY_CODE: 'RJ', KEY_NAME: 'Rajasthan', KEY_CAT: 'state'},
  {KEY_CODE: 'SK', KEY_NAME: 'Sikkim', KEY_CAT: 'state'},
  {KEY_CODE: 'TN', KEY_NAME: 'Tamil Nadu', KEY_CAT: 'state'},
- {KEY_CODE: 'TG', KEY_NAME: 'Telangana', KEY_CAT: 'state'},
+ {KEY_CODE: 'TS', KEY_NAME: 'Telangana', KEY_CAT: 'state'},
  {KEY_CODE: 'TR', KEY_NAME: 'Tripura', KEY_CAT: 'state'},
  {KEY_CODE: 'UP', KEY_NAME: 'Uttar Pradesh', KEY_CAT: 'state'},
- {KEY_CODE: 'UT', KEY_NAME: 'Uttarakhand', KEY_CAT: 'state'},
+ {KEY_CODE: 'UK', KEY_NAME: 'Uttarakhand', KEY_CAT: 'state'},
  {KEY_CODE: 'WB', KEY_NAME: 'West Bengal', KEY_CAT: 'state'}]
 
 SUB_JP = [{KEY_CODE: '23', KEY_NAME: 'Aichi', KEY_CAT: 'prefecture'},
