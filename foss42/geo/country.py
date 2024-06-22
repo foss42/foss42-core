@@ -225,6 +225,86 @@ def code_to_data(code: str) -> dict:
         return NO_WB_DATA
 
 @typechecked
+def code_to_population_density(code: str) -> float:
+    """
+    Returns the population density of the country given its ISO Alpha-2 or Alpha-3 country code.
+
+    >>> code_to_population_density('VN')
+    294.24
+    >>> code_to_population_density('KR')
+    515.61
+    >>> code_to_population_density('IND')
+    428.9
+    >>> code_to_population_density('ZI')
+    Traceback (most recent call last):
+        ...
+    ValueError: No country found for the given Alpha-2 country code.
+    >>> code_to_population_density('RED')
+    Traceback (most recent call last):
+        ...
+    ValueError: No country found for the given Alpha-3 country code.
+    >>> code_to_population_density('R')
+    Traceback (most recent call last):
+        ...
+    ValueError: Invalid country code is provided.
+    """
+    
+    status, msg = is_valid_code(code)
+    if not status: 
+        raise ValueError(msg)
+    
+    code = code.upper()
+    if len(code) == 2: 
+        code = alpha2_to_alpha3(code)
+    
+    data = code_to_data(code)
+    if 'area' in data and 'population' in data:
+        return data['population'] / data['area']
+    else:
+        raise ValueError("Population density data is not available for the given country code.")
+
+@typechecked
+def code_to_gender_ratio(code: str) -> float:
+    """
+    Returns the gender ratio (number of males per 100 females) of the country given its ISO Alpha-2 or Alpha-3 country code.
+
+    >>> code_to_gender_ratio('VN')
+    99.4
+    >>> code_to_gender_ratio('KR')
+    100.4
+    >>> code_to_gender_ratio('IND')
+    103.5
+    >>> code_to_gender_ratio('ZI')
+    Traceback (most recent call last):
+        ...
+    ValueError: No country found for the given Alpha-2 country code.
+    >>> code_to_gender_ratio('RED')
+    Traceback (most recent call last):
+        ...
+    ValueError: No country found for the given Alpha-3 country code.
+    >>> code_to_gender_ratio('R')
+    Traceback (most recent call last):
+        ...
+    ValueError: Invalid country code is provided.
+    """
+
+    status, msg = is_valid_code(code)
+    if not status: 
+        raise ValueError(msg)
+    
+    code = code.upper()
+    if len(code) == 2: 
+        code = alpha2_to_alpha3(code)
+    
+    data = code_to_data(code)
+    if 'population_female_percent' in data:
+        population_female_percent = data['population_female_percent']
+        population_male_percent = 100 - population_female_percent
+        return (population_male_percent / population_female_percent) * 100
+    else:
+        raise ValueError("Gender ratio data is not available for the given country code.")
+
+@typechecked
 def code_to_subdivision(code: str) -> list[dict]:
     """
     Returns the country subdivision details (states, territories, etc.) for the given two letter (Alpha-2) or three letter (Alpha-3) ISO 3166-1 country code. 
