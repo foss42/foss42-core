@@ -1,4 +1,4 @@
-from random import random
+import random
 
 from typeguard import typechecked
 from foss42.data.user.users import USERS
