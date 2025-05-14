@@ -18,6 +18,7 @@ version = SourceFileLoader('version', 'foss42/version.py').load_module()
 DEPENDENCIES = ["Unidecode",
                 "titlecase",
                 "typeguard",
+                "python-jose[cryptography]"
                 ]
 
 setup(name="foss42",
