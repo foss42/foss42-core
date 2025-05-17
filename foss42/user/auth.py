@@ -17,6 +17,15 @@ def create_access_token(data: dict):
 
     Returns:
         A string representing the encoded JWT access token.
+
+    >>> token = create_access_token({'sub': 'Craig Espinoza'})
+    >>> isinstance(token, str)
+    True
+    >>> from jose import jwt
+    >>> from foss42.user.config import SECRET_KEY, ALGORITHM
+    >>> decoded = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    >>> decoded['sub']
+    'Craig Espinoza'
     """
     expires_delta = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode = data.copy()
@@ -27,3 +36,5 @@ def create_access_token(data: dict):
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
+
+print(create_access_token({'sub': 12341}))
