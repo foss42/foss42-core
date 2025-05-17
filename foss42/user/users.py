@@ -3,6 +3,7 @@ import random
 from typeguard import typechecked
 from foss42.data.user.users import USERS
 
+
 @typechecked
 def get_random_user_data():
     """
@@ -16,6 +17,7 @@ def get_random_user_data():
         return None
     return random.choice(USERS)
 
+
 @typechecked
 def get_all_users_data():
     """
@@ -28,6 +30,7 @@ def get_all_users_data():
     if not USERS:
         return []
     return [user_data for user_data in USERS]
+
 
 @typechecked
 def get_user_data_by_id(user_id: int):
