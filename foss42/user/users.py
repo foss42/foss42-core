@@ -12,6 +12,21 @@ def get_random_user_data():
     Returns:
         A dictionary containing the data of a randomly selected user, 
         or None if the USERS list is empty.
+
+    >>> isinstance(get_random_user_data(), dict)
+    True
+    >>> 'id' in get_random_user_data()
+    True
+    >>> 'name' in get_random_user_data()
+    True
+    >>> 'phone' in get_random_user_data()
+    True
+    >>> 'email' in get_random_user_data()
+    True
+    >>> 'country' in get_random_user_data()
+    True
+    >>> get_random_user_data() in USERS
+    True
     """
     if not USERS:
         return None
@@ -25,7 +40,16 @@ def get_all_users_data():
 
     Returns:
         A list of dictionaries, where each dictionary contains the data of a user.
-        Returns an emoty list if the USERS list is empty.
+        Returns an empty list if the USERS list is empty.
+
+    >>> isinstance(get_all_users_data(), list)
+    True
+    >>> len(get_all_users_data())
+    100
+    >>> isinstance(get_all_users_data()[0], dict)
+    True
+    >>> 'id' in get_all_users_data()[0]
+    True
     """
     if not USERS:
         return []
@@ -48,6 +72,20 @@ def get_user_data_by_id(user_id: int):
     Returns:
         A dictionary containing the data of the selected user,
         or None if the USERS list is empty.
+
+    >>> user = get_user_data_by_id(1)
+    >>> user == USERS[0]
+    True
+    >>> get_user_data_by_id(101) == USERS[0]  # Circular indexing
+    True
+    >>> get_user_data_by_id(0) == USERS[-1]   # Wraps to last user
+    True
+    >>> get_user_data_by_id(-1) == USERS[98]   # Wraps to 99th user
+    True
+    >>> isinstance(get_user_data_by_id(50), dict)
+    True
+    >>> 'id' in get_user_data_by_id(50)
+    True
     """
     if not USERS:
         return None
