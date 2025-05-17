@@ -2,13 +2,13 @@ from os import path
 from setuptools import setup, find_packages
 from importlib.machinery import SourceFileLoader
 
-### To run the tests:
+# To run the tests:
 # python setup.py test
 
-### To install on a machine:
+# To install on a machine:
 # sudo python setup.py install
 
-### To install in a home directory (~/lib):
+# To install in a home directory (~/lib):
 # python setup.py install --home=~
 LONG_DESCRIPTION = open(path.join(path.dirname(__file__), 'README.md')).read()
 
@@ -31,21 +31,22 @@ setup(name="foss42",
       long_description_content_type="text/markdown",
       url="https://github.com/foss42/foss42",
       project_urls={
-            "Homepage": "https://foss42.com",
-            "Source Code": "https://github.com/foss42/foss42-core",
-            "Bug Tracker": "https://github.com/foss42/foss42-core/issues",
-            "Documentation": "https://foss42.com",
+          "Homepage": "https://foss42.github.io/foss42-core/",
+          "Source Code": "https://github.com/foss42/foss42-core",
+          "Bug Tracker": "https://github.com/foss42/foss42-core/issues",
+          "Documentation": "https://foss42.github.io/foss42-core/",
       },
       test_suite="test",
-      packages= find_packages(),
+      packages=find_packages(),
       install_requires=DEPENDENCIES,
       tests_require=DEPENDENCIES,
       python_requires='>=3.10',
-      classifiers=[  
-            'Programming Language :: Python :: 3 :: Only',
-            'Programming Language :: Python :: 3',
-            'Programming Language :: Python :: 3.10',
-            'Programming Language :: Python :: 3.11',
-            'Natural Language :: English',
-      ],      
+      classifiers=[
+          'Programming Language :: Python :: 3 :: Only',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
+          'Programming Language :: Python :: 3.12',
+          'Natural Language :: English',
+      ],
       )
